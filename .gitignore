@@ -1,0 +1,15 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+.claude/
+
+# If you fork this into your OWN private learning instance and don't want your
+# personal learner-model committed, uncomment these (the shipped demo keeps them tracked):
+# /state.js
+# /sessions/
+# /wiki/*.html
+# !/wiki/index.html
+# !/wiki/_concept.template.html

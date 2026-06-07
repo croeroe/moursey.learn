@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your textbook — moursey.learn</title>
+<style>
+  :root{--bg:#faf7f2;--ink:#2b2622;--muted:#857b71;--line:#ece6dd;--card:#fffdfa;--accent:#c2410c;
+    --s0:#ece9e4;--s1:#f7e6cf;--s2:#f3c79b;--s3:#e89163;--s4:#c2410c}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:820px;margin:0 auto;padding:30px 24px 90px}
+  .crumbs{font-size:13px;color:var(--muted)}
+  .crumbs a{color:var(--muted);text-decoration:none}.crumbs a:hover{color:var(--accent)}
+  h1{font-family:"Iowan Old Style",Georgia,serif;font-size:32px;margin:12px 0 4px;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:0 0 6px}
+  .count{font-size:13px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+  h2{font-family:"Iowan Old Style",Georgia,serif;font-size:18px;margin:30px 0 4px}
+  .hint{font-size:12px;color:#bcb0a0;margin-bottom:10px}
+  .row{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border:1px solid var(--line);border-radius:11px;background:var(--card);margin:8px 0}
+  .row.ready{cursor:pointer}
+  .row.ready:hover{border-color:#d4763f;box-shadow:0 5px 16px rgba(150,110,70,.10)}
+  .dot{flex:0 0 11px;height:11px;border-radius:50%;margin-top:6px;border:1px solid rgba(0,0,0,.1)}
+  .body{flex:1}
+  .ttl{font-weight:600}
+  .ttl a{color:var(--ink);text-decoration:none}
+  .row.ready .ttl a:hover{color:var(--accent)}
+  .desc{font-size:13.5px;color:#5a534a;margin-top:2px}
+  .pill{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:1px 9px;white-space:nowrap;margin-top:3px}
+  .read{font-size:13px;color:var(--accent);font-weight:600;white-space:nowrap;margin-top:3px}
+  .soon{font-size:12px;color:#bcb0a0;white-space:nowrap;margin-top:4px}
+  .back{display:inline-block;margin-top:30px;color:var(--muted);text-decoration:none;font-size:13px}
+  .back:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">🗺 your curriculum</a></div>
+  <h1>📖 Your textbook</h1>
+  <p class="sub">Every concept you've worked, as a page you can revisit — the field's version <em>and</em> your own notes, side by side.</p>
+  <div class="count" id="count"></div>
+  <div id="toc"></div>
+  <a class="back" href="../index.html">← back to your curriculum map</a>
+</div>
+<script src="../state.js"></script>
+<script>
+(function(){
+  try{
+    var S=window.LEARNED_STATE;
+    var SC={unknown:"--s0",exposed:"--s1",understands:"--s2","can-apply":"--s3","can-teach":"--s4"};
+    var cssv=function(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();};
+    var esc=function(s){return (s==null?"":String(s)).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});};
+    var firstSentence=function(t){ if(!t) return ""; var m=String(t).split(/(?<=[.!?])\s/)[0]; return m.length>140?m.slice(0,138)+"…":m; };
+
+    var written=0, total=S.nodes.length;
+    var html="";
+    S.tiers.forEach(function(t){
+      var ns=S.nodes.filter(function(n){return n.tier===t.id;});
+      if(!ns.length) return;
+      html+='<h2>'+esc(t.label)+'</h2><div class="hint">'+esc(t.hint||"")+'</div>';
+      ns.forEach(function(n){
+        var ready=!!n.wiki; if(ready) written++;
+        var dot=cssv(SC[n.status]||"--s0");
+        html+='<div class="row '+(ready?"ready":"")+'"'+(ready?' onclick="location.href=\''+esc(n.wiki)+'\'"':'')+'>'+
+          '<span class="dot" style="background:'+dot+'"></span>'+
+          '<div class="body"><div class="ttl">'+(ready?'<a href="'+esc(n.wiki)+'">'+esc(n.label)+'</a>':esc(n.label))+'</div>'+
+          (n.note?'<div class="desc">'+esc(firstSentence(n.note))+'</div>':'')+'</div>'+
+          (ready?'<span class="read">Read →</span>':'<span class="soon">'+(n.status==="unknown"?"ahead":"no page yet")+'</span>')+
+          '</div>';
+      });
+    });
+    document.getElementById('toc').innerHTML=html;
+    document.getElementById('count').textContent=written+' page'+(written===1?'':'s')+' written so far · '+total+' concepts on the map · grows every session';
+  }catch(err){
+    document.getElementById('toc').innerHTML='<p style="color:#a00">Render error — tell Claude: '+(err&&err.message||err)+'</p>';
+  }
+})();
+</script>
+</body>
+</html>
