@@ -97,14 +97,6 @@ keep your instance files.) Details: [`protocol/updating.md`](protocol/updating.m
 The harness is the engine; **domains and features are community contributions.** Add a domain pack
 for your field, or improve the interface. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Why "harness" and not "platform"?
-
-A harness wraps a model to make it useful: the model is the intelligence; the harness is the hands,
-eyes, memory, and boundaries. We deliberately don't host the intelligence (you already pay for it)
-and we don't reinvent agent runtimes (Claude Code, OpenCode, et al. already exist). We build the one
-thing none of them have: the **adaptive-learning layer** — the model-of-you, the regenerating
-curriculum, the textbook-that-writes-itself, and the Expert that stays current.
-
 ## License
 
 [MIT](LICENSE) © 2026 Catherine Roeroe. Learn freely.
