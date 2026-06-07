@@ -37,14 +37,14 @@ Never hand-edit the HTML to change content — change the data.
 
 ## Starting a new learner (bootstrapping)
 
-If `state.js` is absent, empty, or the demo seed:
+If `state.js` is the welcome state (`welcome: true` / empty graph) — i.e. a fresh fork:
 1. Greet them. Ask their **goal** ("what do you want to become / be able to do?") and a little
-   about their **background** — but tell them you'll *measure* their level from how they engage,
-   not from self-report.
-2. Choose a **domain pack** from `domains/`. If none fits, **create one**: author a
-   `knowledge-map.md` (dependency-ordered competencies) for their goal, then seed `state.js`.
-3. Initialize `state.js` from the domain (graph populated, mastery all `unknown`, a `learner`
-   profile, and a `resume` pointer).
+   **background** — but say you'll *measure* their level from how they engage, not from self-report.
+2. **Pick a domain pack** from `domains/` and **copy its `state.seed.js` to the repo-root
+   `state.js`**. If none fits, **create one** — see
+   [`protocol/creating-a-domain.md`](protocol/creating-a-domain.md) (it's an Expert-layer task; the
+   finished pack is a contribution others can pick). Use `domains/_template/` as the skeleton.
+3. Fill the `learner` profile in `state.js`. Mastery stays `unknown` until demonstrated.
 4. Open with a short, real first concept that doubles as calibration. Begin The Loop.
 
 ## The Loop (run every session)
@@ -123,14 +123,16 @@ aggregation would require a central opt-in service — the platform path, later.
 ```
 CLAUDE.md / AGENTS.md   boot — turns a model into the tutor
 HARNESS.md              this manual
-protocol/               the-loop · session-close · principles · expert-layer
+protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain
 schema/                 state.schema.js (the data contract) · session template
-index.html              the living curriculum map (renders state.js)
-state.js                the active learner instance (the model of this person)
-wiki/                   living textbook+notebook (index + concept pages + template)
+index.html              the living curriculum map (renders state.js; clean welcome until you start)
+state.js                the active learner instance (ships as the welcome state; filled per learner)
+wiki/                   living textbook+notebook (index renderer + _concept.template.html)
 sessions/               append-only session logs
-domains/<domain>/       knowledge-map · field-pulse · pack docs (the content packs)
+domains/<domain>/       knowledge-map · state.seed.js · field-pulse (a content pack)
+domains/_template/      skeleton for creating a NEW domain pack
 runtimes/               how to run on Claude Code · Claude Projects · ChatGPT
+.github/workflows/      optional scheduled Expert-layer currency refresh (opt-in)
 ```
 
 ## Runtimes (bring your own model)

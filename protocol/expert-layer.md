@@ -29,6 +29,26 @@ pack for everyone.
 5. **Push deltas to the learner** — when the field shifts under something they learned, tell them
    ("what you learned still holds, but here's what's new / now outdated").
 
+## Decoupled from the learner, and maintained (open repo, not a platform)
+
+The Expert is **the domain pack** (`domains/<field>/` — knowledge-map + field-pulse), which is
+**per-field, not per-learner**, and lives **upstream**. A learner's fork *consults* it to build a
+curriculum; it never privately owns or mutates the shared pack. So "Expert" (shared) and "learner
+model" (private, per-fork) are cleanly separate artifacts. Cold-starting a new field's Expert =
+[`creating-a-domain.md`](creating-a-domain.md).
+
+Keeping it current without a backend, two repo-native mechanisms:
+- **(a) Community currency PRs.** A learner's tutor runs a sweep on the learner's own compute,
+  produces an updated `field-pulse` / graph deltas, and PRs it upstream. Maintainers merge; forks
+  get it on `git pull`. (Currency is high-value + low-controversy, so this surface stays active.)
+- **(b) Scheduled CI.** The upstream repo can run a periodic GitHub Action that has an AI refresh
+  each domain's `field-pulse` and open a PR for review — decoupled from any learner, on a schedule,
+  with no hosted platform. Starter: `.github/workflows/refresh-field-pulse.yml` (a maintainer enables
+  it and supplies an API key as a CI secret).
+
+Tradeoff to be honest about: full local privacy ⇄ automatic central currency is a dial. Forks keep
+data private; the price is currency flows via PRs/CI, not an always-on central brain.
+
 ## Honesty
 State your training cutoff and that you're live-searching. Tag sources by credibility. Better to say
 "I couldn't verify this" than to teach a confident-sounding unknown. The Expert's value is judgment,

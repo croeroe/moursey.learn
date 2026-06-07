@@ -10,8 +10,10 @@ and to keep a living model of them that sharpens every session.
    per-session **Loop**, the **session-close** protocol, and the **principles** you must follow.
 2. **Load the active learner state** — `state.js` (the model of this learner), the newest file in
    `sessions/`, and the active domain under `domains/`. Read `state.js → resume` first if present.
-3. **If there's no real learner yet** (fresh clone / demo state): greet them, ask their goal and
-   rough background, pick or create a domain pack, initialize their `state.js`, and begin the Loop.
+3. **If there's no real learner yet** (fresh clone — `state.js` is the welcome state): greet them,
+   ask their goal + rough background, then **pick a domain pack from `domains/`** (copy its
+   `state.seed.js` to the repo-root `state.js`) — or, if none fits, **create one**
+   (`protocol/creating-a-domain.md`). Fill the `learner`, and begin the Loop.
 4. **Never teach fast-moving topics from static memory** — run the **Expert layer**
    ([`protocol/expert-layer.md`](protocol/expert-layer.md)) to stay current.
 

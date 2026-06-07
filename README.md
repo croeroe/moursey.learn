@@ -55,29 +55,31 @@ is just files + prompts — free, forkable, and alive.
 git clone https://github.com/croeroe/moursey.learn.git
 cd moursey.learn
 claude                      # Claude reads CLAUDE.md and becomes your tutor
-open index.html            # watch your living curriculum (start with the AI-alignment demo)
+open index.html            # a clean welcome screen — it comes alive as you learn
 ```
-Then just tell it your goal. It picks or builds a domain pack, initializes your model, and starts.
+Then tell it your goal. It picks a domain from `domains/` (or builds a new one), initializes your model, and starts teaching.
 
 **Other runtimes** (any model, BYO): see [`runtimes/`](runtimes/) for
 [Claude Code](runtimes/claude-code.md), [Claude.ai Projects](runtimes/claude-projects.md), and
 [ChatGPT custom GPTs](runtimes/chatgpt.md).
 
-> Ships **alive** with a real, dogfooded **AI-alignment** domain — open `index.html` to see the map,
-> and `wiki/` for example textbook pages. Want a different field? Tell your tutor; it builds the pack.
+> **Starts clean.** Pick the bundled **AI-alignment** domain pack or have your tutor build one for
+> your field. Your curriculum map, mastery, and textbook fill in from *your* sessions — nothing is
+> pre-filled, because it's your model, not someone else's.
 
 ## Repo layout
 
 ```
 CLAUDE.md / AGENTS.md   boot files — a model reads these and becomes the tutor
 HARNESS.md              the operating manual (the brain)
-protocol/               the-loop · session-close · principles · expert-layer
+protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain
 schema/                 the state.js data contract
-index.html · state.js   the living dashboard + the model of you
-wiki/                   the living textbook+notebook
+index.html · state.js   the living dashboard + your model (ships as a clean welcome)
+wiki/                   the living textbook+notebook (+ _concept template)
 sessions/               append-only session logs
-domains/ai-alignment/   the first domain pack (dogfooded)
+domains/                pickable packs (e.g. ai-alignment) + _template for new fields
 runtimes/               how to run on your model of choice
+.github/workflows/      optional scheduled Expert-layer currency refresh
 ```
 
 ## Contributing

@@ -146,6 +146,15 @@
     var byId = {}; S.nodes.forEach(function(n){byId[n.id]=n;});
     var esc = function(s){return (s==null?"":String(s)).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});};
 
+    /* welcome / empty state — a fresh fork hasn't started yet */
+    if (S.welcome || !S.nodes || !S.nodes.length) {
+      document.querySelector('.wrap').innerHTML =
+        '<header><h1>moursey.learn</h1><div class="sub">A living, adaptive-learning harness — powered by your own AI.</div></header>'+
+        '<div class="resume" style="margin-top:24px"><b>▶ Start here.</b> Open this repo with your AI (see <code>runtimes/</code>), tell it your goal, and pick a domain from <code>domains/</code> — or have it create a new one. It initializes your learning here, and this page comes alive.</div>'+
+        '<p class="sub" style="margin-top:16px">Nothing is pre-filled — your curriculum map, mastery, and textbook build from <em>your</em> sessions. That’s the point.</p>';
+      return;
+    }
+
     /* header */
     document.getElementById('hsub').innerHTML =
       'A living model of <b>'+esc(S.learner.name)+'</b>’s path to becoming an <b>'+esc(S.learner.goal)+'</b>.';

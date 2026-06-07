@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<!--
+  CONCEPT PAGE TEMPLATE — moursey.learn
+  The tutor copies this to wiki/<concept-id>.html and fills it for ONE concept, in the learner's
+  voice + the field's voice. Keep the two voices clearly separated:
+    .callout.note-you  = the LEARNER'S OWN bridges/analogies, captured from how THEY reasoned (notebook)
+    .callout.sharpen   = a precision guardrail where an analogy would drift into a misconception
+    plain prose        = the FIELD'S canonical version (real terminology; dfn = hoverable key term)
+  Also include: Key terms, Connects-to (links), Open threads (their live questions), Test yourself
+  (hidden-answer retrieval prompts). Delete sections that don't apply. Replace every {{...}}.
+  Zero dependencies — self-contained, works by double-clicking. Do not add CDNs.
+-->
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{Concept name}} — moursey.learn wiki</title>
+<style>
+  :root{--bg:#faf7f2;--ink:#2b2622;--muted:#857b71;--line:#ece6dd;--card:#fffdfa;--accent:#c2410c;
+    --you:#fbf0d6;--youline:#e7c073;--youink:#7a571a;--sharp:#e9f1ee;--sharpline:#8fbcae;--sharpink:#2f5d52}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:780px;margin:0 auto;padding:26px 24px 90px}
+  .crumbs{font-size:13px;color:var(--muted)}.crumbs a{color:var(--muted);text-decoration:none}.crumbs a:hover{color:var(--accent)}
+  .tag{display:inline-block;font-size:12px;color:var(--accent);border:1px solid #eccfa6;background:#f7e6cf;border-radius:20px;padding:2px 10px;margin-top:14px}
+  h1{font-family:"Iowan Old Style",Georgia,serif;font-size:32px;margin:8px 0 6px;letter-spacing:-.01em}
+  .def{font-size:18px;color:#4a443d;margin:0 0 6px}
+  .meta{font-size:12.5px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+  h2{font-family:"Iowan Old Style",Georgia,serif;font-size:22px;margin:34px 0 8px}
+  p{margin:12px 0} dfn{font-style:normal;font-weight:600;border-bottom:1.5px dotted var(--accent);cursor:help}
+  .callout{border-radius:12px;padding:13px 16px;margin:16px 0;border:1px solid;font-size:15px}
+  .callout .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+  .note-you{background:var(--you);border-color:var(--youline)}.note-you .lab{color:var(--youink)}.note-you b{color:var(--youink)}
+  .sharpen{background:var(--sharp);border-color:var(--sharpline)}.sharpen .lab{color:var(--sharpink)}
+  .terms{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 18px;margin:18px 0}
+  .terms dt{font-weight:700;margin-top:12px;font-size:14.5px}.terms dd{margin:2px 0 0;color:#4a443d;font-size:14.5px}
+  .connect a,.threads a{color:var(--accent);text-decoration:none;font-weight:600}.connect a:hover{text-decoration:underline}.connect{font-size:15px}
+  .threads{background:#fbeee9;border:1px solid #f0cdbd;border-radius:12px;padding:13px 16px;font-size:15px}
+  details.test{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin:10px 0}
+  details.test summary{cursor:pointer;font-weight:600}details.test .a{margin-top:8px;color:#4a443d;border-top:1px dashed var(--line);padding-top:8px}
+  .back{display:inline-block;margin-top:30px;color:var(--muted);text-decoration:none;font-size:13px}.back:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="index.html">📖 textbook</a> · <a href="../index.html">🗺 curriculum</a></div>
+  <span class="tag">{{Tier · short context}}</span>
+  <h1>{{Concept name}}</h1>
+  <p class="def">{{One-sentence canonical definition — the crispest true statement of what this is.}}</p>
+  <div class="meta">{{Tier}} · status: {{mastery}} · first built session {{n}}</div>
+
+  <h2>1. {{Section: the canonical core}}</h2>
+  <p>{{Field-accurate explanation. Bold real terms; wrap key ones in <dfn title="definition">term</dfn>.}}</p>
+
+  <div class="callout note-you"><span class="lab">✎ In your words</span>
+    {{The learner's OWN bridge/analogy for this, captured from how they reasoned. Their encoding.}}</div>
+
+  <h2>2. {{Section: mechanism / detail}}</h2>
+  <p>{{...}}</p>
+
+  <div class="callout sharpen"><span class="lab">↗ Sharpen it</span>
+    {{Where the learner's analogy needs a caveat so it doesn't fossilize into a misconception.}}</div>
+
+  <div class="terms">
+    <h3 style="font-family:'Iowan Old Style',Georgia,serif;margin:14px 0 0">Key terms (the field's words)</h3>
+    <dl><dt>{{Term}}</dt><dd>{{Plain definition.}}</dd></dl>
+  </div>
+
+  <h2>→ Connects to</h2>
+  <p class="connect">{{<a href="other-concept.html">Concept</a> — how it relates · ...}}</p>
+
+  <h2>? Open threads (your live questions)</h2>
+  <div class="threads">{{The learner's unresolved question worth returning to — often the doorway to the next concept.}}</div>
+
+  <h2>✓ Test yourself (later)</h2>
+  <details class="test"><summary>{{A retrieval question}}</summary><div class="a">{{The answer.}}</div></details>
+
+  <a class="back" href="index.html">← textbook</a> &nbsp;·&nbsp; <a class="back" href="../index.html">curriculum →</a>
+</div>
+</body>
+</html>
