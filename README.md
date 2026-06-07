@@ -34,13 +34,14 @@ A few simple parts, working as one — a bit like a great tutor, a good textbook
 - **A textbook that's half yours.** Every idea becomes a page in the field's words **and** your own notes and analogies — so it sticks, and you can always come back to it.
 - **An expert that keeps up.** It stays current with your field, so what you learn is true *now* — not years out of date.
 - **A tool-maker.** It isn't stuck with built-in features: when you'd learn better a different way, it can build you a new explainer, exercise, or view on the spot.
+- **Real things to show for it.** You don't just learn — you *build* as you go (write-ups, small projects, explainers), so you finish with a real body of work, not just a certificate.
 - **Everything is yours.** Your map, notes, and progress are plain files you keep — a record of everything you've learned.
 
 These work as one loop: it gets to know you → picks your next thing → teaches it (kept current, with whatever tool fits) → writes it into your textbook → and understands you a little better. Every session.
 
 ## Why not just take a course — or ask your AI directly?
 
-|  | A course or video | Just your AI, on its own | moursey.learn |
+| What you want | A course or video | Just your AI, on its own | moursey.learn |
 |---|---|---|---|
 | **Built around you** | Same for everyone | Answers what you ask | Learns how *you* learn |
 | **Knows what to teach next** | A fixed path | Nothing — *you* must know what to ask | Maps the journey, picks your next step |
@@ -48,6 +49,7 @@ These work as one loop: it gets to know you → picks your next thing → teache
 | **Tracks what you've mastered** | No | No | Yes — and aims at your gaps |
 | **Keeps you active** | You watch | You read answers | You explain & practice — how it sticks |
 | **Something to revisit** | Slides | Scrolls away | Your own growing textbook |
+| **Something to show for it** | A certificate | Nothing | A real portfolio of work |
 
 **The short version:** your AI is a brilliant engine — but on its own it's a forgetful genius who waits for you to ask, and only knows what it knew at training time. moursey turns it into a *teacher*: it remembers you, holds the plan, keeps things current, and has a method — so it actually takes you somewhere over weeks and months, instead of handing you a great answer you scroll past. And it's free and open: it runs on the AI you already have, and everything you build stays yours.
 

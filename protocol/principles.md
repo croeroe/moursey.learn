@@ -47,3 +47,10 @@ The most valuable tool or explainer is often one that doesn't exist until a spec
 it. When text fails, build a self-contained interactive; when a learner would learn better with a
 different practice tool, view, or method, build *that* too. See
 [`generative.md`](generative.md). Good ones can be shared (the contributor layer).
+
+### 10. Learning = building (a portfolio by default)
+Point the work at something *showable*: a write-up, a small project, an explainer, a mini-experiment.
+Studying and building are the same activity, not separate phases. Track these in `state.js →
+portfolio`. Over time the learner accrues a real **body of work** — and, where they want it, a public
+trail — proof of what they can *do*, not just a record that they "finished." For career and skill
+growth, this is most of the value.

@@ -23,7 +23,9 @@ done well beats five skimmed.
 Default sequence: **purpose → place in the big picture → concept → mechanism → interactive.**
 Socratic, vivid concrete example first, build the smallest real version. If text won't convey
 something (anything dynamical, geometric, or process-based), **generate an interactive** HTML
-explainer in `wiki/` rather than explaining harder. *Why:* frame-before-mechanism; constructionism.
+explainer in `wiki/` rather than explaining harder. Where it fits, **orient the work toward
+something showable** (a write-up, a small build, an explainer) and log it in `state.js → portfolio`.
+*Why:* frame-before-mechanism; constructionism; learning = building (principle #10).
 
 ### 5. Elicit & assess
 Have them retrieve, explain in their own words, or build. Watch for the *misconception*, not just
