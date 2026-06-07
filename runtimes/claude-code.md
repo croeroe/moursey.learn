@@ -1,8 +1,11 @@
-# Run moursey.learn in Claude Code (recommended)
+# Run moursey.learn in Claude Code (terminal / developers)
 
 **Claude Code is included with Claude Pro/Max** — so this runs on your *subscription*, with no
-per-token billing, and it's the richest experience: the tutor reads and writes your files natively
-and runs the full loop.
+per-token billing: the tutor reads and writes your files natively and runs the full loop in your
+terminal. Great if you're comfortable in a command line or want to contribute to the harness itself.
+
+> Not a developer? **[Claude Cowork](cowork.md)** is the friendlier default — same files, same
+> harness, no terminal, and your map + interactives render right in the app.
 
 ## Setup
 ```bash

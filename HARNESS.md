@@ -162,7 +162,10 @@ clean.
 ## Runtimes (bring your own model)
 
 moursey.learn runs on the learner's own model. See `runtimes/`. Briefly:
-- **Claude Code** (incl. in Claude Pro/Max) — richest: native file read/write + agentic loop.
+- **Claude Cowork** (recommended for most learners) — desktop app, no terminal; reads/writes your
+  files *and* renders the map + interactives as live artifacts in-app. See `runtimes/cowork.md`.
+- **Claude Code** (incl. in Claude Pro/Max) — terminal/IDE; native file read/write + agentic loop.
+  Best for developers and for contributing to the harness.
 - **Claude.ai Project / ChatGPT custom GPT** — upload these files + instructions; state is more manual.
 - **BYO API key** (OpenCode/Aider/etc.) — power users; metered.
 

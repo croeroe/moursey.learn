@@ -55,13 +55,13 @@ These work as one loop: it gets to know you → picks your next thing → teache
 
 ## Get started
 
-You'll need an AI you can chat with that can open files. The smoothest is **Claude Code** (included with a Claude Pro or Max plan).
+The smoothest way is **[Claude Cowork](runtimes/cowork.md)** — Anthropic's desktop app. No command line, and your map and interactive explainers show *right in the app*.
 
-1. **Get the project** — click the green **Code** button above → *Download ZIP* (or `git clone` it).
-2. **Open it with your AI.**
-3. **Tell it what you want to learn.** It takes care of the rest — and opening **`index.html`** in your browser shows your living map as it grows.
+1. **Get the project** — click the green **Code** button above → *Download ZIP*.
+2. **Point Cowork at the folder** and tell it to read `HARNESS.md` and be your tutor.
+3. **Tell it what you want to learn.** It takes care of the rest — your living map and textbook build as you go, right there in the app.
 
-Prefer ChatGPT, or Claude on the web? It works there too — see **[how to run it](runtimes/)**.
+Prefer the terminal? **[Claude Code](runtimes/claude-code.md)** (in a Claude Pro/Max plan) works great too. On ChatGPT or Claude on the web? Also fine — see **[all the ways to run it](runtimes/)**.
 
 ## Want to learn something niche, or help build this?
 
