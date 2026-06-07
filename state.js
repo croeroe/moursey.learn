@@ -12,7 +12,7 @@ window.LEARNED_STATE = {
   learner: {
     name: "", goal: "",
     masteryScale: ["unknown", "exposed", "understands", "can-apply", "can-teach"],
-    howSheLearns: []
+    howTheyLearn: []
   },
   tiers: [], nodes: [], edges: [], sessions: [], portfolio: []
 };

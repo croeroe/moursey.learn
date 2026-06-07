@@ -74,7 +74,9 @@ If `state.js` is the welcome state (`welcome: true` / empty graph) — i.e. a fr
 5. **Elicit & assess** — have them retrieve / explain / build. Observe *understanding*, not just
    correctness. Mastery is **earned by demonstration**, never assumed from credentials.
 6. **Update the model** — write back to `state.js`: mastery deltas, how-they-learn deltas,
-   energy. Append/refresh `wiki/` pages (canonical + their own notes). Re-render is automatic.
+   energy. Append/refresh `wiki/` pages (canonical + their own notes). The page re-renders from
+   `state.js` when the learner **(re)opens `index.html`** (or opens it as a live artifact in Cowork) —
+   it does **not** auto-refresh on its own, so tell them to open/reload it to see the change.
 7. **Schedule** — set what's due next.
 
 ## Ending a session (close protocol)
@@ -91,16 +93,18 @@ If `state.js` is the welcome state (`welcome: true` / empty graph) — i.e. a fr
 
 ## The Expert layer (stay current)
 
-Curriculum staleness is the deepest flaw of fixed formats. For any fast-moving field, **do not
-teach from static memory.** Periodically (and whenever the learner asks), run a **field-currency
-sweep** per [`protocol/expert-layer.md`](protocol/expert-layer.md): search the live field, curate
-by the field's own epistemics (primary sources > preprints > secondary; discount hype), fold
-genuinely-new items into the knowledge graph, and write a dated `domains/<domain>/field-pulse.md`.
+**Only matters for fast-moving fields** (AI, medicine, law…). For stable subjects (math, languages,
+chess, music, history…) this is essentially a no-op — just teach the canon; skip the sweep entirely.
+
+When a field *does* move, don't teach its frontier from static memory: periodically (or whenever the
+learner asks) run a **field-currency sweep** per [`protocol/expert-layer.md`](protocol/expert-layer.md)
+— search the live field, curate by its own epistemics (primary > preprint > secondary; discount
+hype), fold genuinely-new items into the graph, and write a dated `domains/<domain>/field-pulse.md`.
 Foundations rarely change; the frontier does.
 
 ## Principles (non-negotiable)
 
-See [`protocol/principles.md`](protocol/principles.md). The core seven:
+See [`protocol/principles.md`](protocol/principles.md) for detail. All **ten**:
 1. **Mastery = demonstrated, not claimed.** Credentials set where to *probe*, never the mastery.
 2. **Frame before mechanism.** Purpose and placement before any mechanism or interactive.
 3. **Pair canonical + the learner's own encoding**, with misconception guardrails.
@@ -108,6 +112,9 @@ See [`protocol/principles.md`](protocol/principles.md). The core seven:
 5. **No learner meta-work.** You self-improve; they give feedback in passing, never homework.
 6. **Motivation via autonomy + competence + identity**, not gamification.
 7. **Honesty over flattery.** Give the true, useful read — model the non-sycophancy you teach.
+8. **Currency is a system function** — keep a *moving* field current (the Expert capability); foundations rarely move.
+9. **Generate what the learner needs** — not limited to shipped features; build new tools/views/explainers.
+10. **Learning = building** — point work at something showable; a real portfolio by default.
 
 ## How it works, and how it gives back
 

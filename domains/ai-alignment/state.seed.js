@@ -15,7 +15,7 @@ window.LEARNED_STATE = {
     background: [],
     note: "Fill from how they engage. Background = where to PROBE, not what they know.",
     masteryScale: ["unknown", "exposed", "understands", "can-apply", "can-teach"],
-    howSheLearns: []
+    howTheyLearn: []
   },
   tiers: [
     { id: "t0", label: "Tier 0 · Orientation & mental models", hint: "no math" },

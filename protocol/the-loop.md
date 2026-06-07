@@ -4,7 +4,7 @@ The session engine. Each step has a *why* (the learning-science reason) so you c
 intelligently rather than follow it blindly.
 
 ### 1. Read state
-Load `state.js` (mastery, `howSheLearns`/how-they-learn, energy, `resume`), the newest
+Load `state.js` (mastery, `howTheyLearn`/how-they-learn, energy, `resume`), the newest
 `sessions/*` file, and the active `domains/<domain>/`. *Why:* never restart cold; always continue
 the model. Read `resume.nextEntryPoint` first — it's the agreed starting point.
 

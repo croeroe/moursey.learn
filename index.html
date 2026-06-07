@@ -275,7 +275,7 @@
     /* how she learns */
     document.getElementById('howLearn').innerHTML='<h2>How you learn</h2>'+
       '<div class="lead">Inferred from real signal, revised every session — not self-reported.</div>'+
-      S.learner.howSheLearns.map(function(r){
+      S.learner.howTheyLearn.map(function(r){
         var cls=r.tag==='strong'?'t-strong':(r.tag==='growing'?'t-growing':'t-unknown');
         var dot=r.tag==='strong'?'#2f7d32':(r.tag==='growing'?'#b06a16':'#b8aea2');
         return '<div class="row"><div class="k"><span class="dot" style="background:'+(dot)+'"></span>'+esc(r.dim)+'</div><div class="v">'+esc(r.read)+'</div></div>';
@@ -293,8 +293,9 @@
       'moursey.learn · self-contained, no external libraries · data lives in <code>state.js</code>, this file just renders it · '+
       'the tutor updates the data each session.';
 
-    /* preselect the most recently advanced concept */
-    select('sycophancy');
+    /* preselect the most-advanced concept so far, else the first node */
+    var pre = S.nodes.filter(function(n){return n.status && n.status!=='unknown';}).pop() || S.nodes[0];
+    if (pre) select(pre.id);
   }catch(err){
     document.body.innerHTML='<div style="max-width:680px;margin:60px auto;font-family:sans-serif;color:#a00">'+
       '<h2>Render error</h2><p>Something threw while building the view — tell Claude and it’ll fix it:</p>'+

@@ -33,7 +33,7 @@ window.LEARNED_STATE = {
     note: "Working note to yourself: how to teach THIS person well (their rules, traps).",
     masteryScale: ["unknown", "exposed", "understands", "can-apply", "can-teach"],
     // Inferred from real signal, revised each session. tag: strong | growing | unknown
-    howSheLearns: [
+    howTheyLearn: [
       { dim: "Best-fit delivery", read: "...", tag: "strong" },
       { dim: "Known gap", read: "...", tag: "growing" }
     ]
