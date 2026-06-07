@@ -2,100 +2,62 @@
 
 # moursey.learn
 
-**A living, open-source harness for *truly* adaptive learning — powered by your own AI.**
+**Your own AI tutor that builds a course around *you* — and changes as you do.**
 
-*Not a course. A model of you, plus a tutor that regenerates your curriculum every session.*
+*Tell it what you want to learn. It maps the path, teaches you one step at a time, remembers how you think, and keeps a personal textbook as you go.*
 
 </div>
 
 ---
 
-## What this is
+## What it is
 
-`moursey.learn` is a **harness**: the scaffolding that wraps an AI model and turns it into a
-relentless, personalized tutor. The model brings the *intelligence* (your own Claude or GPT). The
-harness brings the *structure* — a living model of you, a self-rewriting curriculum, an interactive
-textbook that fills with your own notes, and an "Expert layer" that keeps the field current.
+Most learning is one-size-fits-all: the same fixed course for everyone, frozen the day it was made.
 
-It exists because the two biggest flaws of normal learning are baked in:
-1. **Fixed curricula** that ignore how *you* learn and how the *field* evolves.
-2. **The cost of intelligence** — so platforms ration it.
+moursey.learn is the opposite. It's a free, open learning companion that uses an AI you already have (like Claude or ChatGPT) to teach **you** — building your path around your goal, adapting to how you actually learn, and remembering everything you understand so you never start over.
 
-`moursey.learn` fixes both: the curriculum is an *output* (regenerated each session from a model of
-you), and the intelligence is **yours** (your existing Claude/GPT subscription), so the whole thing
-is just files + prompts — free, forkable, and alive.
-
-> **Bring your own model. Own your learning.**
+No subscription to us. No sign-up. Your learning stays yours.
 
 ## How it works
 
-A harness you *run*, not a platform we host — no central brain.
-
-- **The learning loop (per fork) — local.** Every session updates a model of *you* (`state.js`):
-  what you've *demonstrated*, how you learn, your energy. Your curriculum re-derives from it, and
-  your AI keeps the field **current** for you (it researches the live frontier on your own compute).
-  No fixed syllabus, no cutoff, nothing central.
-- **The contributor layer (per fork → upstream) — consensual.** If your learning produces something
-  genuinely new (a better explanation, a new interactive, a new domain pack), your AI checks whether
-  upstream already has it and — with your approval, **never mid-lesson** — proposes a PR. That's how
-  the harness improves for everyone: opt-in contributions, not central aggregation.
+1. **You say what you want to learn** — "I want to understand X," or "I want to become a Y."
+2. **It maps the whole journey** — every idea you'll need, in a sensible order, from the basics up to the cutting edge.
+3. **It teaches you the right next thing** — one piece at a time, explained the way that actually lands for *you*, and it checks that you really get it before moving on.
+4. **It remembers you** — how you think, what clicked, where you stopped. Every session picks up exactly where you left off. Nothing ever starts cold.
 
 ## What you get
 
-| | |
+- **A living map of your learning.** See everything you're working toward, and watch it fill in as you go — colored by what you've *truly understood*, not just "finished."
+- **A textbook that writes itself.** Every concept gets its own page: the clear, accurate explanation **and** your own notes and analogies, side by side — so it sticks. Revisit anytime.
+- **Hands-on explainers, made on the spot.** When words aren't enough, it builds you a little interactive thing to play with until it clicks.
+- **It stays current.** It checks what's actually true in your field *now*, so you're never learning an outdated version.
+- **Everything is yours.** Your map, your notes, your progress are plain files you keep — and they can grow into a record of everything you've learned.
+
+## Why it's different from a course
+
+| A normal course or video | moursey.learn |
 |---|---|
-| 🗺 **Living curriculum map** | Your whole competency graph, color-coded by what you've actually *demonstrated*. Open `index.html`. |
-| 📖 **Textbook + notebook** | Every concept becomes a page with the *field's canonical version* **and** *your own bridges*, side by side, plus misconception guardrails and self-tests. |
-| 🔁 **A model of you** | `state.js` — mastery, how you learn, motivation. It compounds; sessions never start cold. |
-| 🧪 **Generated interactives** | When text won't convey something, your tutor builds a self-contained interactive on the spot. |
-| 🛰 **Expert layer** | Field-currency sweeps so the curriculum tracks the frontier. |
+| The same for everyone | Built around *you*, and changes as you change |
+| Frozen the day it was made | Keeps up with the field |
+| You watch, then forget | You explain and *do* — which is how learning actually sticks |
+| You pay a platform every month | Uses an AI you already have — free and open |
+| Lives on someone else's site | Lives with you — your progress is yours, forever |
 
-## Quickstart (60 seconds)
+Think of it less as "a course" and more as a brilliant personal tutor who never forgets you, never gets tired, and only ever teaches the next thing *you* need.
 
-**The premium path — Claude Code** (included with Claude Pro/Max):
-```bash
-git clone https://github.com/croeroe/moursey.learn.git
-cd moursey.learn
-claude                      # Claude reads CLAUDE.md and becomes your tutor
-open index.html            # a clean welcome screen — it comes alive as you learn
-```
-Then tell it your goal. It picks a domain from `domains/` (or builds a new one), initializes your model, and starts teaching.
+## Get started
 
-**Other runtimes** (any model, BYO): see [`runtimes/`](runtimes/) for
-[Claude Code](runtimes/claude-code.md), [Claude.ai Projects](runtimes/claude-projects.md), and
-[ChatGPT custom GPTs](runtimes/chatgpt.md).
+You'll need an AI you can chat with that can open files. The smoothest is **Claude Code** (included with a Claude Pro or Max plan).
 
-> **Starts clean.** Pick the bundled **AI-alignment** domain pack or have your tutor build one for
-> your field. Your curriculum map, mastery, and textbook fill in from *your* sessions — nothing is
-> pre-filled, because it's your model, not someone else's.
+1. **Get the project** — click the green **Code** button above → *Download ZIP* (or `git clone` it).
+2. **Open it with your AI.**
+3. **Tell it what you want to learn.** It takes care of the rest — and opening **`index.html`** in your browser shows your living map as it grows.
 
-## Repo layout
+Prefer ChatGPT, or Claude on the web? It works there too — see **[how to run it](runtimes/)**.
 
-```
-CLAUDE.md / AGENTS.md   boot files — a model reads these and becomes the tutor
-HARNESS.md              the operating manual (the brain)
-protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain
-schema/                 the state.js data contract
-index.html · state.js   the living dashboard + your model (ships as a clean welcome)
-wiki/                   the living textbook+notebook (+ _concept template)
-sessions/               append-only session logs
-domains/                OPTIONAL starter packs (e.g. ai-alignment) + _template for new fields
-contributions/          the contributor-layer candidate queue
-runtimes/               how to run on your model of choice
-```
+## Want to learn something niche, or help build this?
 
-## Staying up to date
-
-Forks don't auto-update — a fork is a snapshot. When the harness improves upstream, the easiest way
-to get it is to **ask your AI to "update yourself"**: it pulls the upstream *harness* changes while
-**preserving your learning** (`state.js`, `sessions/`, your `wiki/` pages), then tells you what's
-new. (Prefer git? GitHub's **"Sync fork"** button, or `git pull upstream main`, works too — just
-keep your instance files.) Details: [`protocol/updating.md`](protocol/updating.md).
-
-## Contributing
-
-The harness is the engine; **domains and features are community contributions.** Add a domain pack
-for your field, or improve the interface. See [CONTRIBUTING.md](CONTRIBUTING.md).
+It can teach *any* subject — if there's no ready-made guide for your field, your AI just builds one. If you'd like to share that for others, or improve the tool itself, see **[CONTRIBUTING](CONTRIBUTING.md)**. Curious how it all works under the hood? That's in **[HARNESS.md](HARNESS.md)**.
 
 ## License
 
