@@ -16,7 +16,8 @@ to watch you author a syllabus.
 2. **(Fast-moving fields only) run a quick Expert-layer sweep** ([`expert-layer.md`](expert-layer.md))
    to ground the pack in the current field. **Skip this for stable subjects** (chess, math, music,
    languages, history) — use the established canon.
-3. **Build a SMALL graph.** `cp -r domains/_template domains/<field-id>/`. Author `knowledge-map.md`
+3. **Build a SMALL graph.** `cp -r domains/_template domains/<field-id>/` (stable field? delete the
+   copied `field-pulse.md` stub — you don't need it). Author `knowledge-map.md`
    with a Tier 0–1 starter (dependency-ordered, each node naming prerequisites, nodes small and
    teachable). Don't try to be complete — you'll grow it across sessions.
 4. **Write the seed.** Fill `state.seed.js` to match the map (all `status: "unknown"`; prerequisites

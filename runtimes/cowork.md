@@ -20,8 +20,9 @@ things moursey wants:
 
 ## Seeing your map & interactives
 Ask Cowork to **open your living map** (`index.html`) and your **textbook** (`wiki/`) as live
-artifacts — they render in-app and refresh as your model updates. When it builds an interactive
-explainer, it can show it the same way, inline.
+artifacts — they render in-app; re-open (or ask Cowork to re-render) them after the model updates to
+see the latest — they don't refresh on their own. When it builds an interactive explainer, it can
+show it the same way, inline.
 
 ## Notes
 - Everything still lives in **plain files in your folder** (map, notes, progress) — yours to keep,

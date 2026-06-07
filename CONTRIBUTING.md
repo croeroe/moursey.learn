@@ -19,7 +19,8 @@ A domain pack is the knowledge a tutor needs to teach a field well. Add one unde
 domains/<your-domain>/
 ├── README.md          what this pack covers, who it's for, prerequisites
 ├── knowledge-map.md   the competency graph: tiers + nodes (dependency-ordered, coarse → frontier)
-└── field-pulse.md     (optional) a dated currency snapshot to seed the Expert layer
+├── state.seed.js      the same graph as data (nodes/edges, all status "unknown") — copied to a learner's state.js
+└── field-pulse.md     (optional, fast-moving fields only) a dated currency snapshot for the Expert layer
 ```
 
 Good domain packs:
@@ -29,7 +30,9 @@ Good domain packs:
 - Are honest about what's **canon vs. frontier**.
 - Orient toward **doing** — each strand should be able to terminate in a real artifact.
 
-You don't need to author `state.js` — the tutor seeds a learner's state from your `knowledge-map.md`.
+Author `state.seed.js` to match your `knowledge-map.md` (all `status: "unknown"`; prerequisites as
+`edges`) — the tutor copies it to the learner's `state.js` on selection. Use `domains/_template/` as
+the skeleton.
 
 ## 2. Contribute interface / feature components
 

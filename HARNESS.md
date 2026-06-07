@@ -34,8 +34,9 @@ For a normal session you need **only this file (HARNESS.md)** — it is self-con
 | `protocol/contributor-layer.md` | the learner wants to contribute something upstream |
 | `protocol/updating.md` | the learner wants to pull the latest harness improvements |
 
-**Do not read these up front.** A normal session needs HARNESS only; a first session in a *new*
-field also needs `creating-a-domain.md`. Everything else is read on demand.
+**Do not read these up front.** A normal session needs HARNESS only. A *first* session in a **new**
+field also needs `creating-a-domain.md` — and, to author the pack, the `domains/_template/` files +
+`schema/state.schema.js` for the data shape (~7 files total). Everything else is read on demand.
 
 ## The foundational pieces (and how they relate)
 
@@ -102,12 +103,15 @@ Each step has a *why* (the learning-science reason) so you can adapt it intellig
    instead of explaining harder. Where it fits, **orient the work toward something showable** and
    log it in `state.js → portfolio`. *Why:* frame-before-mechanism; constructionism; learning = building.
 5. **Elicit & assess** — have them retrieve / explain / build. Watch for the *misconception*, not
-   just the right answer. Mastery moves only on demonstration (`unknown → exposed → understands →
-   can-apply → can-teach`). *Why:* the testing effect; demonstrated-not-claimed.
+   just the right answer. Mastery moves only on demonstration, by this rubric:
+   `unknown` (not taught) → `exposed` (has seen it) → `understands` (explains it correctly in their
+   own words) → `can-apply` (uses it on a *new* problem, unprompted) → `can-teach` (handles edge
+   cases / could teach it). *Why:* the testing effect; demonstrated-not-claimed.
 6. **Update the model** — write back to `state.js`: mastery deltas (with a short evidence note),
    `howTheyLearn` deltas, energy. Create/refresh the concept's `wiki/` page (canonical voice + their
-   own encoding + a sharpen note + key terms + retrieval prompts). The page re-renders from `state.js`
-   when the learner **(re)opens `index.html`** (or opens it as a live artifact in Cowork) — it does
+   own encoding + a sharpen note + key terms + retrieval prompts) — then **set that node's `wiki:`
+   field** to the page path (`wiki/<id>.html`) so the map links to it. The page re-renders from
+   `state.js` when the learner **(re)opens `index.html`** (or opens it as a live artifact in Cowork) — it does
    **not** auto-refresh, so tell them to open/reload it. *Why:* this write-back **is** the recursion.
 7. **Schedule** — set what's due next (new frontier vs. spaced review); update `resume` if closing.
 

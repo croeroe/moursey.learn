@@ -238,7 +238,7 @@
 
     /* nodes via foreignObject */
     var nodeSVG=S.nodes.map(function(n){
-      var p=pos[n.id], m=SMETA[n.status];
+      var p=pos[n.id], m=SMETA[n.status]||SMETA.unknown;
       var bg=cssv(m.v), bd=cssv(m.b), tc=cssv(m.t);
       var cf=(n.confidence!=null)?'<div class="cf"><i style="width:'+Math.round(n.confidence*100)+'%"></i></div>':'';
       return '<foreignObject x="'+p.x+'" y="'+p.y+'" width="'+p.w+'" height="'+p.h+'">'+
@@ -258,7 +258,7 @@
       document.querySelectorAll('.node').forEach(function(el){el.classList.toggle('sel',el.getAttribute('data-id')===id);});
       document.querySelectorAll('.edge').forEach(function(el){
         el.classList.toggle('hot', el.getAttribute('data-a')===id||el.getAttribute('data-b')===id);});
-      var m=SMETA[n.status];
+      var m=SMETA[n.status]||SMETA.unknown;
       var tier=(S.tiers.filter(function(t){return t.id===n.tier;})[0]||{}).label||'';
       var html='<h3 class="dt">'+esc(n.label)+'</h3><div class="meta">'+
         '<span class="tag" style="background:'+cssv(m.v)+';border-color:'+cssv(m.b)+';color:'+cssv(m.t)+'">'+m.l+'</span>'+
