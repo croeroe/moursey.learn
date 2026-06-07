@@ -27,16 +27,18 @@ is just files + prompts — free, forkable, and alive.
 
 > **Bring your own model. Own your learning.**
 
-## How it works — the three loops
+## How it works
 
-- **Learner loop (per person).** Every session updates a model of *you* (`state.js`): what you've
-  *demonstrated*, how you learn, your energy. Your curriculum re-derives from it. No fixed syllabus.
-- **Domain loop (per field).** An *Expert layer* keeps the knowledge current by searching the live
-  field and curating by credibility — so you learn the field as it is *now*, not as of some cutoff.
-- **Product loop (cross-learner).** Generalizable insights about *how people learn* flow back into
-  the harness through community contributions (PRs), curated — so it compounds for everyone. A fork
-  is private by default, so this loop is **contribution-gated, not automatic** (your tutor can draft
-  the PRs for you at session-close).
+A harness you *run*, not a platform we host — no central brain.
+
+- **The learning loop (per fork) — local.** Every session updates a model of *you* (`state.js`):
+  what you've *demonstrated*, how you learn, your energy. Your curriculum re-derives from it, and
+  your AI keeps the field **current** for you (it researches the live frontier on your own compute).
+  No fixed syllabus, no cutoff, nothing central.
+- **The contributor layer (per fork → upstream) — consensual.** If your learning produces something
+  genuinely new (a better explanation, a new interactive, a new domain pack), your AI checks whether
+  upstream already has it and — with your approval, **never mid-lesson** — proposes a PR. That's how
+  the harness improves for everyone: opt-in contributions, not central aggregation.
 
 ## What you get
 
@@ -77,9 +79,9 @@ schema/                 the state.js data contract
 index.html · state.js   the living dashboard + your model (ships as a clean welcome)
 wiki/                   the living textbook+notebook (+ _concept template)
 sessions/               append-only session logs
-domains/                pickable packs (e.g. ai-alignment) + _template for new fields
+domains/                OPTIONAL starter packs (e.g. ai-alignment) + _template for new fields
+contributions/          the contributor-layer candidate queue
 runtimes/               how to run on your model of choice
-.github/workflows/      optional scheduled Expert-layer currency refresh
 ```
 
 ## Contributing

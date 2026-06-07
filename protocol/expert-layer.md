@@ -29,25 +29,16 @@ pack for everyone.
 5. **Push deltas to the learner** — when the field shifts under something they learned, tell them
    ("what you learned still holds, but here's what's new / now outdated").
 
-## Decoupled from the learner, and maintained (open repo, not a platform)
+## A per-fork capability, not a maintained central layer
 
-The Expert is **the domain pack** (`domains/<field>/` — knowledge-map + field-pulse), which is
-**per-field, not per-learner**, and lives **upstream**. A learner's fork *consults* it to build a
-curriculum; it never privately owns or mutates the shared pack. So "Expert" (shared) and "learner
-model" (private, per-fork) are cleanly separate artifacts. Cold-starting a new field's Expert =
-[`creating-a-domain.md`](creating-a-domain.md).
-
-Keeping it current without a backend, two repo-native mechanisms:
-- **(a) Community currency PRs.** A learner's tutor runs a sweep on the learner's own compute,
-  produces an updated `field-pulse` / graph deltas, and PRs it upstream. Maintainers merge; forks
-  get it on `git pull`. (Currency is high-value + low-controversy, so this surface stays active.)
-- **(b) Scheduled CI.** The upstream repo can run a periodic GitHub Action that has an AI refresh
-  each domain's `field-pulse` and open a PR for review — decoupled from any learner, on a schedule,
-  with no hosted platform. Starter: `.github/workflows/refresh-field-pulse.yml` (a maintainer enables
-  it and supplies an API key as a CI secret).
-
-Tradeoff to be honest about: full local privacy ⇄ automatic central currency is a dial. Forks keep
-data private; the price is currency flows via PRs/CI, not an always-on central brain.
+This is something your AI does *for you*, on your own compute — **not** a central library that
+anyone hosts, curates, or keeps fresh on a schedule. There is no maintained "Expert" and no central
+brain. If a sweep produces something worth *sharing* (a fresher `field-pulse`, a better-structured
+graph, a new domain pack), it flows back the same way everything else does: through the
+**contributor layer** ([`contributor-layer.md`](contributor-layer.md)) — logged passively, deduped
+against live upstream, proposed to the learner, contributed by PR with consent. Domain packs in
+`domains/` are **optional starter examples**, not a curated catalog; your AI can build a pack for any
+field on the fly ([`creating-a-domain.md`](creating-a-domain.md)).
 
 ## Honesty
 State your training cutoff and that you're live-searching. Tag sources by credibility. Better to say

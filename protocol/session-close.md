@@ -13,12 +13,11 @@ Run every time a session ends. Continuity is a feature; the close matters as muc
    - `energyNote` — how to read/ask their energy next time.
    The dashboard surfaces this; you read it first on resume.
 4. **Schedule retrieval.** What's due for spaced recall next open.
-5. **Distill product insight (only if new) → and offer to contribute it upstream.** If the session
-   taught a *generalizable* principle (about teaching) or a domain-pack improvement, note it
-   locally, then **draft a PR-ready contribution to the upstream harness** (a `protocol/` tweak, a
-   new/better `domains/` pack, or an interface component) and *offer* it to the learner to submit.
-   This is the **product loop**: a fork can't feed back automatically — it only closes via
-   consensual contribution, curated by a maintainer. If nothing generalizable came up — add nothing.
+5. **(Optional) review contribution candidates.** Session-close is *one convenient* moment to empty
+   the contributor queue (`contributions/candidates.md`) — but it is **not required** and not the
+   only trigger; the learner can review anytime (the queue persists). If they want to: walk the
+   candidates, dedup each against **live upstream**, and draft PRs for the ones they approve. See
+   [`contributor-layer.md`](contributor-layer.md). Never let this disrupt the learning itself.
 6. **Ask their energy.** They steer by it. Next session opens with retrieval, then their direction.
 
 After this, a fresh model instance should be able to pick up perfectly from `state.js` + the newest

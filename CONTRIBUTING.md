@@ -3,10 +3,12 @@
 The harness is the engine; **domains and features are where the community compounds.** Two main ways
 to contribute, plus the usual fixes.
 
-> **This *is* the product loop.** Because every learner runs a private fork, the harness only
-> improves for everyone when insights flow back as PRs. There's no automatic aggregation by design
-> (your learning stays yours). Your tutor can even *draft* contributions for you at session-close —
-> a maintainer then curates what gets merged, and improvements reach everyone who pulls.
+> **This *is* the contributor layer.** Because every learner runs a private fork, the harness
+> improves for everyone only through consensual contributions back to upstream — there's no central
+> aggregation by design (your learning stays yours). As you learn, your AI passively notes novel
+> improvements, checks them against **live upstream** (so it never re-proposes what already exists),
+> and drafts PRs *with your approval* — never interrupting the lesson. See
+> [`protocol/contributor-layer.md`](protocol/contributor-layer.md).
 
 ## 1. Contribute a domain pack (highest value)
 

@@ -72,7 +72,8 @@ If `state.js` is the welcome state (`welcome: true` / empty graph) — i.e. a fr
 3. **Set the resume pointer** — fill `state.js → resume` with one unambiguous entry point. The
    dashboard shows it; you read it first next time.
 4. **Schedule retrieval** — what to recall next open, before new material.
-5. **Distill product insight (only if new)** — see "the three loops"; if nothing new, add nothing.
+5. **(Optional) review contribution candidates** — empty the `contributions/` queue if the learner
+   wants (never required, never disruptive). See [`protocol/contributor-layer.md`](protocol/contributor-layer.md).
 6. **Ask their energy** — they steer by it; next session opens with retrieval, then their choice.
 
 ## The Expert layer (stay current)
@@ -95,44 +96,41 @@ See [`protocol/principles.md`](protocol/principles.md). The core seven:
 6. **Motivation via autonomy + competence + identity**, not gamification.
 7. **Honesty over flattery.** Give the true, useful read — model the non-sycophancy you teach.
 
-## The three loops (how the system self-improves)
+## How it works, and how it gives back
 
-Each loop lives at a different scope — and this matters, because moursey.learn is **decentralized**
-(everyone runs their own fork), so the loops do *not* all behave the same way.
+moursey.learn is a **harness people run**, not a platform anyone hosts — so there is no central
+brain, no maintained library, no aggregation. Two things happen:
 
-- **Learner loop (per fork) — automatic, local.** Every session updates this learner's model; the
-  curriculum re-derives. Runs entirely in their clone, offline and private. Works fully.
-- **Domain loop (per fork compute, shareable output).** The model runs field-currency sweeps on the
-  learner's own compute (Expert layer). The *outputs* — updated domain packs / `field-pulse` — are
-  non-private artifacts that can be contributed upstream.
-- **Product loop (cross-fork) — NOT automatic; contribution-gated.** A fork is an island: there is
-  no automatic path for insights to flow back. This loop closes only through **open-source
-  contributions (PRs) to the upstream repo, curated by a maintainer**; merged improvements then
-  propagate to anyone who pulls. The asymmetry: *downstream* (→ forks) is easy via `git pull`;
-  *upstream* (→ shared harness) is manual + PR-gated. To assist it: at session-close, when you
-  detect a genuinely generalizable insight, **draft a PR-ready contribution** (a `protocol/` tweak,
-  a new/better `domains/` pack, or a component) and **offer it to the learner to submit upstream** —
-  consensual, never automatic. Domain packs are the main contribution surface.
+- **The learning loop (per fork) — local, automatic.** Your AI teaches, keeps a model of the
+  learner, and **keeps the field current for them** (the Expert *capability* — it researches the
+  live frontier on the learner's own compute when it matters; see
+  [`expert-layer.md`](protocol/expert-layer.md)). All local. Nothing central required.
+- **The contributor layer (per fork → upstream) — consensual, non-disruptive.** If the process
+  produces something genuinely *new* (a better explanation, a new interactive, a new domain pack),
+  your AI logs it quietly, checks whether **live upstream** already has it (it may have been added
+  after the fork), and — only with the learner's approval, and **never mid-lesson** — proposes a PR.
+  See [`contributor-layer.md`](protocol/contributor-layer.md). That's the *only* path to shared
+  improvement, and it's opt-in.
 
-**Tradeoff (tell the learner if asked):** full local privacy ⇄ automatic cross-learner learning is a
-dial. v1 chooses privacy; the price is the product loop is PR-mediated and slow. Automatic
-aggregation would require a central opt-in service — the platform path, later.
+Currency and content are things the learner's AI does *for them*; sharing is the learner's choice.
+Central layers (a hosted Expert, automatic aggregation) only earn their keep if this becomes a
+platform later — a separate, deliberate choice.
 
 ## File map
 
 ```
 CLAUDE.md / AGENTS.md   boot — turns a model into the tutor
 HARNESS.md              this manual
-protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain
+protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain · contributor-layer
 schema/                 state.schema.js (the data contract) · session template
 index.html              the living curriculum map (renders state.js; clean welcome until you start)
 state.js                the active learner instance (ships as the welcome state; filled per learner)
 wiki/                   living textbook+notebook (index renderer + _concept.template.html)
 sessions/               append-only session logs
-domains/<domain>/       knowledge-map · state.seed.js · field-pulse (a content pack)
+domains/<domain>/       knowledge-map · state.seed.js · field-pulse (an OPTIONAL starter pack)
 domains/_template/      skeleton for creating a NEW domain pack
+contributions/          the contributor-layer candidate queue (passively logged; learner-reviewed)
 runtimes/               how to run on Claude Code · Claude Projects · ChatGPT
-.github/workflows/      optional scheduled Expert-layer currency refresh (opt-in)
 ```
 
 ## Runtimes (bring your own model)
