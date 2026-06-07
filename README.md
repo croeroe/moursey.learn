@@ -84,6 +84,14 @@ contributions/          the contributor-layer candidate queue
 runtimes/               how to run on your model of choice
 ```
 
+## Staying up to date
+
+Forks don't auto-update — a fork is a snapshot. When the harness improves upstream, the easiest way
+to get it is to **ask your AI to "update yourself"**: it pulls the upstream *harness* changes while
+**preserving your learning** (`state.js`, `sessions/`, your `wiki/` pages), then tells you what's
+new. (Prefer git? GitHub's **"Sync fork"** button, or `git pull upstream main`, works too — just
+keep your instance files.) Details: [`protocol/updating.md`](protocol/updating.md).
+
 ## Contributing
 
 The harness is the engine; **domains and features are community contributions.** Add a domain pack

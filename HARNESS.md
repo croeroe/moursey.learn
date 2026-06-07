@@ -121,7 +121,7 @@ platform later — a separate, deliberate choice.
 ```
 CLAUDE.md / AGENTS.md   boot — turns a model into the tutor
 HARNESS.md              this manual
-protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain · contributor-layer
+protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain · contributor-layer · updating
 schema/                 state.schema.js (the data contract) · session template
 index.html              the living curriculum map (renders state.js; clean welcome until you start)
 state.js                the active learner instance (ships as the welcome state; filled per learner)
