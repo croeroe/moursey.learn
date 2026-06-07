@@ -4,24 +4,29 @@ When a learner's goal has no existing pack in `domains/`, you (the tutor) **auth
 the Expert layer's *cold start* for a field (see [`expert-layer.md`](expert-layer.md)) — and a
 finished pack is a contribution back to the upstream repo so others can pick it.
 
+## Keep it minimal — teach first, grow later
+Do **not** build a full curriculum before the first lesson. A **small Tier 0–1 starter graph** (a
+handful of nodes) is enough to begin. Greet, ship the small pack, teach immediately, and expand the
+map across sessions. A long silent build violates "no learner meta-work" — they came to learn, not
+to watch you author a syllabus.
+
 ## Steps
-1. **Scope the goal.** "What do you want to become / be able to do?" Pin down the target capability.
-2. **Run an Expert-layer sweep** (`expert-layer.md`) to ground the pack in the *current* field, not
-   your static memory: what matters, what's foundational vs. frontier, the field's own epistemics.
-3. **Build the graph.** Copy `domains/_template/` → `domains/<field-id>/`. Author `knowledge-map.md`:
-   dependency-ordered competencies, coarse → frontier, each node naming its prerequisites. Foundations
-   first. Keep nodes small and teachable. Every strand should be able to end in a shippable artifact.
-4. **Write the seed.** Fill `state.seed.js` to match the map (all `status: "unknown"`; encode
-   prerequisites as `edges`).
-5. **Write `field-pulse.md`** — a dated currency snapshot + the field's epistemics (so future
-   sweeps know how to curate for this field).
-6. **Initialize the learner.** Copy `state.seed.js` → repo-root `state.js`; fill `learner`; begin
-   The Loop.
-7. **Offer to contribute it upstream.** A new domain pack is the highest-value contribution —
-   draft a PR so other learners can select this field. (Consensual; the learner submits.)
+1. **Scope the goal.** Pin the target capability (e.g. "good at chess" → tactics + basic endgames +
+   an opening or two).
+2. **(Fast-moving fields only) run a quick Expert-layer sweep** ([`expert-layer.md`](expert-layer.md))
+   to ground the pack in the current field. **Skip this for stable subjects** (chess, math, music,
+   languages, history) — use the established canon.
+3. **Build a SMALL graph.** `cp -r domains/_template domains/<field-id>/`. Author `knowledge-map.md`
+   with a Tier 0–1 starter (dependency-ordered, each node naming prerequisites, nodes small and
+   teachable). Don't try to be complete — you'll grow it across sessions.
+4. **Write the seed.** Fill `state.seed.js` to match the map (all `status: "unknown"`; prerequisites
+   as `edges`).
+5. **Initialize the learner.** Copy `state.seed.js` → repo-root `state.js`; fill `learner`; begin the Loop.
+6. **(Later, optional)** write `field-pulse.md` if the field moves, and **offer to contribute the
+   pack upstream** so others can pick it. (Consensual; the learner submits — not mid-lesson.)
 
 ## Quality bar
-- Dependency-ordered and honest about canon vs. frontier.
-- States the field's epistemics (what counts as credible/current here).
-- Teachable nodes; portfolio-oriented strands.
+- Dependency-ordered and honest about canon vs. frontier. **Small is fine; complete is not required.**
+- (Fast-moving fields) states the field's epistemics for future sweeps.
+- Teachable nodes; strands that can end in something showable.
 - No learner-specific content in the pack — it's shared curriculum, not one person's notes.
