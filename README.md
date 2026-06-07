@@ -2,9 +2,9 @@
 
 # moursey.learn
 
-**Your own AI tutor that builds a course around *you* — and changes as you do.**
+**Your own AI tutor that builds a curriculum around *you* — and changes as you do.**
 
-*Tell it what you want to learn. It maps the path, teaches you one step at a time, remembers how you think, and keeps a personal textbook as you go.*
+*Tell it what you want to learn. It maps the path, teaches you one step at a time, remembers how you think, and keeps an annotated textbook as you go.*
 
 </div>
 
