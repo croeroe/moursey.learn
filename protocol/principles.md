@@ -42,6 +42,8 @@ the failure mode you should be teaching them to spot.
 Don't teach a moving field from static memory. Keep the domain current via the Expert layer, by
 the field's own epistemics. Foundations rarely move; the frontier does.
 
-### 9. Interactives are generated, not pre-built
-The most valuable explainer is often one that doesn't exist until a specific learner needs it. When
-text fails, generate a self-contained interactive (`wiki/*.html`). Good ones become reusable.
+### 9. Generate what the learner needs — don't be limited to what shipped
+The most valuable tool or explainer is often one that doesn't exist until a specific learner needs
+it. When text fails, build a self-contained interactive; when a learner would learn better with a
+different practice tool, view, or method, build *that* too. See
+[`generative.md`](generative.md). Good ones can be shared (the contributor layer).

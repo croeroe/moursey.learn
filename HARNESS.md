@@ -20,17 +20,30 @@ scaffolding, not the model.
 Be the best tutor this learner has ever had, and get measurably better at teaching *them* every
 session. Optimize for real understanding and a real portfolio — not coverage, not vibes.
 
-## The four layers (what lives where)
+## The foundational pieces (and how they relate)
 
-1. **Knowledge graph** — `domains/<domain>/knowledge-map.md` + the `tiers`/`nodes`/`edges` in
-   `state.js`. A dependency-ordered map of the competencies for the learner's goal. Living.
-2. **Learner model** — `state.js → learner` + the mastery on each node. The evolving model of
-   *this person*: what they've **demonstrated**, how they learn, their motivation/energy, goals.
-   This is the asset that compounds.
-3. **Orchestrator** — *you*, the model. You run **The Loop** below each session.
-4. **Interface** — `index.html` (the living curriculum map) and `wiki/` (the living
-   textbook+notebook). Self-contained HTML that renders `state.js`. The learner opens these in a
-   browser; you keep them current.
+Like a good human learning environment, the harness is a small set of foundational pieces that
+together are general enough to absorb any future extension — new features are *these pieces
+producing something new*, not new architecture.
+
+1. **The model of the learner — "the brain."** `state.js → learner` + per-node mastery. Its growing
+   understanding of *this person*: what they've **demonstrated**, how they learn, energy, goals.
+   Decides what's taught next and how. The asset that compounds.
+2. **The content.** The knowledge map (`domains/<domain>/knowledge-map.md` + `tiers`/`nodes`/`edges`
+   in `state.js`) and the learner's **textbook** (`wiki/`) — what there is to learn, plus the record
+   of what they've learned (the field's words *and* theirs).
+3. **The expert — staying current.** [`protocol/expert-layer.md`](protocol/expert-layer.md). Keeps
+   the content true to the field *now*, not a frozen snapshot.
+4. **The tools — and making new ones.** [`protocol/generative.md`](protocol/generative.md).
+   Interactives, *and the ability to generate new tools, views, and ways of learning* for a specific
+   learner. This is what makes it truly adaptive.
+5. **The tutor — "the teacher."** *You*, the AI, running **The Loop** below each session — the piece
+   that puts the others in motion.
+
+**How they relate:** each session the **tutor** reads the **model of the learner**, picks the next
+thing from the **content** (kept fresh by the **expert**), teaches it — reaching for or
+**generating tools** when needed — writes the result into the **textbook**, and updates the
+**model**. A cycle.
 
 Data and view are deliberately separated: you edit `state.js` (data); the HTML just renders it.
 Never hand-edit the HTML to change content — change the data.
@@ -121,7 +134,7 @@ platform later — a separate, deliberate choice.
 ```
 CLAUDE.md / AGENTS.md   boot — turns a model into the tutor
 HARNESS.md              this manual
-protocol/               the-loop · session-close · principles · expert-layer · creating-a-domain · contributor-layer · updating
+protocol/               the-loop · session-close · principles · expert-layer · generative · creating-a-domain · contributor-layer · updating
 schema/                 state.schema.js (the data contract) · session template
 index.html              the living curriculum map (renders state.js; clean welcome until you start)
 state.js                the active learner instance (ships as the welcome state; filled per learner)

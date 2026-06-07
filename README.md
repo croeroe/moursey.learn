@@ -21,17 +21,22 @@ No subscription to us. No sign-up. Your learning stays yours.
 ## How it works
 
 1. **You say what you want to learn** — "I want to understand X," or "I want to become a Y."
-2. **It maps the whole journey** — every idea you'll need, in a sensible order, from the basics up to the cutting edge.
+2. **It maps the whole journey** — every idea you'll need, in a sensible order, from the basics up to the cutting edge — and it keeps that map **up to date** with what's actually true in the field today.
 3. **It teaches you the right next thing** — one piece at a time, explained the way that actually lands for *you*, and it checks that you really get it before moving on.
-4. **It remembers you** — how you think, what clicked, where you stopped. Every session picks up exactly where you left off. Nothing ever starts cold.
+4. **When words aren't enough, it invents a new way in** — an interactive to play with, a different exercise, a fresh angle — built for *you* on the spot.
+5. **It remembers you** — how you think, what clicked, where you stopped. Every session picks up exactly where you left off. Nothing ever starts cold.
 
-## What you get
+## What's inside — and how it fits together
 
-- **A living map of your learning.** See everything you're working toward, and watch it fill in as you go — colored by what you've *truly understood*, not just "finished."
-- **A textbook that writes itself.** Every concept gets its own page: the clear, accurate explanation **and** your own notes and analogies, side by side — so it sticks. Revisit anytime.
-- **Hands-on explainers, made on the spot.** When words aren't enough, it builds you a little interactive thing to play with until it clicks.
-- **It stays current.** It checks what's actually true in your field *now*, so you're never learning an outdated version.
-- **Everything is yours.** Your map, your notes, your progress are plain files you keep — and they can grow into a record of everything you've learned.
+A few simple parts, working as one — a bit like a great tutor, a good textbook, and the right tools, rolled together:
+
+- **A living map of how *you* learn.** It quietly builds a picture of how you think and what you've *truly* grasped (you can watch it fill in, in color) — and uses it to choose your perfect next step. This is the part that makes it *yours*.
+- **A textbook that's half yours.** Every idea becomes a page in the field's words **and** your own notes and analogies — so it sticks, and you can always come back to it.
+- **An expert that keeps up.** It stays current with your field, so what you learn is true *now* — not years out of date.
+- **A tool-maker.** It isn't stuck with built-in features: when you'd learn better a different way, it can build you a new explainer, exercise, or view on the spot.
+- **Everything is yours.** Your map, notes, and progress are plain files you keep — a record of everything you've learned.
+
+These work as one loop: it gets to know you → picks your next thing → teaches it (kept current, with whatever tool fits) → writes it into your textbook → and understands you a little better. Every session.
 
 ## Why it's different from a course
 
