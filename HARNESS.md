@@ -133,6 +133,19 @@ contributions/          the contributor-layer candidate queue (passively logged;
 runtimes/               how to run on Claude Code · Claude Projects · ChatGPT
 ```
 
+## Instance vs harness (the line updates must never cross)
+
+Two kinds of files live in this repo. They currently share folders (a **convention**, not a
+structural split), so you must keep the line in mind yourself:
+
+- **Harness — shared, safe to update from upstream:** everything *except* the instance files below.
+- **Instance — the learner's; NEVER overwrite on update:** `state.js`, `sessions/`, the learner's
+  generated `wiki/<concept>.html`, `contributions/candidates.md`.
+
+When updating ([`protocol/updating.md`](protocol/updating.md)), pull harness changes **only** —
+never touch instance files. Maintainers: don't change instance files after release, so syncs stay
+clean.
+
 ## Runtimes (bring your own model)
 
 moursey.learn runs on the learner's own model. See `runtimes/`. Briefly:
