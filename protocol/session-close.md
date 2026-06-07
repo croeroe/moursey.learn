@@ -13,9 +13,12 @@ Run every time a session ends. Continuity is a feature; the close matters as muc
    - `energyNote` — how to read/ask their energy next time.
    The dashboard surfaces this; you read it first on resume.
 4. **Schedule retrieval.** What's due for spaced recall next open.
-5. **Distill product insight (only if new).** If the session taught a *generalizable* principle
-   about learning/teaching/product, append one entry to `PRODUCT.md`'s insight log (if the
-   deployment keeps one). If nothing new — add nothing. No padding.
+5. **Distill product insight (only if new) → and offer to contribute it upstream.** If the session
+   taught a *generalizable* principle (about teaching) or a domain-pack improvement, note it
+   locally, then **draft a PR-ready contribution to the upstream harness** (a `protocol/` tweak, a
+   new/better `domains/` pack, or an interface component) and *offer* it to the learner to submit.
+   This is the **product loop**: a fork can't feed back automatically — it only closes via
+   consensual contribution, curated by a maintainer. If nothing generalizable came up — add nothing.
 6. **Ask their energy.** They steer by it. Next session opens with retrieval, then their direction.
 
 After this, a fresh model instance should be able to pick up perfectly from `state.js` + the newest

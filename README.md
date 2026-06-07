@@ -33,8 +33,10 @@ is just files + prompts — free, forkable, and alive.
   *demonstrated*, how you learn, your energy. Your curriculum re-derives from it. No fixed syllabus.
 - **Domain loop (per field).** An *Expert layer* keeps the knowledge current by searching the live
   field and curating by credibility — so you learn the field as it is *now*, not as of some cutoff.
-- **Product loop (cross-learner).** Generalizable insights about *how people learn* accrue back into
-  the harness, so it gets better for everyone.
+- **Product loop (cross-learner).** Generalizable insights about *how people learn* flow back into
+  the harness through community contributions (PRs), curated — so it compounds for everyone. A fork
+  is private by default, so this loop is **contribution-gated, not automatic** (your tutor can draft
+  the PRs for you at session-close).
 
 ## What you get
 

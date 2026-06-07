@@ -3,6 +3,11 @@
 The harness is the engine; **domains and features are where the community compounds.** Two main ways
 to contribute, plus the usual fixes.
 
+> **This *is* the product loop.** Because every learner runs a private fork, the harness only
+> improves for everyone when insights flow back as PRs. There's no automatic aggregation by design
+> (your learning stays yours). Your tutor can even *draft* contributions for you at session-close —
+> a maintainer then curates what gets merged, and improvements reach everyone who pulls.
+
 ## 1. Contribute a domain pack (highest value)
 
 A domain pack is the knowledge a tutor needs to teach a field well. Add one under
