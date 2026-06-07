@@ -38,17 +38,18 @@ A few simple parts, working as one — a bit like a great tutor, a good textbook
 
 These work as one loop: it gets to know you → picks your next thing → teaches it (kept current, with whatever tool fits) → writes it into your textbook → and understands you a little better. Every session.
 
-## Why it's different from a course
+## Why not just take a course — or ask your AI directly?
 
-| A normal course or video | moursey.learn |
-|---|---|
-| The same for everyone | Built around *you*, and changes as you change |
-| Frozen the day it was made | Keeps up with the field |
-| You watch, then forget | You explain and *do* — which is how learning actually sticks |
-| You pay a platform every month | Uses an AI you already have — free and open |
-| Lives on someone else's site | Lives with you — your progress is yours, forever |
+|  | A course or video | Just your AI, on its own | moursey.learn |
+|---|---|---|---|
+| **Built around you** | Same for everyone | Answers what you ask | Learns how *you* learn |
+| **Knows what to teach next** | A fixed path | Nothing — *you* must know what to ask | Maps the journey, picks your next step |
+| **Remembers you** | No | Forgets between chats | Never starts cold |
+| **Tracks what you've mastered** | No | No | Yes — and aims at your gaps |
+| **Keeps you active** | You watch | You read answers | You explain & practice — how it sticks |
+| **Something to revisit** | Slides | Scrolls away | Your own growing textbook |
 
-Think of it less as "a course" and more as a brilliant personal tutor who never forgets you, never gets tired, and only ever teaches the next thing *you* need.
+**The short version:** your AI is a brilliant engine — but on its own it's a forgetful genius who waits for you to ask, and only knows what it knew at training time. moursey turns it into a *teacher*: it remembers you, holds the plan, keeps things current, and has a method — so it actually takes you somewhere over weeks and months, instead of handing you a great answer you scroll past. And it's free and open: it runs on the AI you already have, and everything you build stays yours.
 
 ## Get started
 
